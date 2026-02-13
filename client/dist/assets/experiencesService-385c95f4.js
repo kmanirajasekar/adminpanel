@@ -1,0 +1,1 @@
+import{I as t}from"./index-50296341.js";const a="/api/experiences",s={async getAll(){return await t.get(`${a}`)},async get(e){return await t.get(`${a}/${e}`)},async update(e,r){return await t.put(`${a}/${e}`,r)},async create(e){return await t.post(`${a}`,e)},async delete(e){return await t.delete(`${a}/${e}`)}};export{s as e};

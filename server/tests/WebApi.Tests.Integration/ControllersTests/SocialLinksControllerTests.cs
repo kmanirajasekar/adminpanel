@@ -29,7 +29,7 @@ public class SocialLinksControllerTests : BaseControllerTest
 
         // Assert
         response.EnsureSuccessStatusCode();
-        response.Should().HaveStatusCode(HttpStatusCode.NoContent);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -42,7 +42,7 @@ public class SocialLinksControllerTests : BaseControllerTest
         var response = await _httpClient.GetAsync("api/social-links/" + id);
 
         // Assert
-        response.Should().HaveStatusCode(HttpStatusCode.Unauthorized);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
 
     [Fact]
@@ -115,6 +115,6 @@ public class SocialLinksControllerTests : BaseControllerTest
         deleteResponse.EnsureSuccessStatusCode();
 
         var getResponse = await _httpClient.GetAsync("api/social-links/" + addedSocialLink.Id);
-        getResponse.Should().HaveStatusCode(HttpStatusCode.NoContent);
+        getResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 }

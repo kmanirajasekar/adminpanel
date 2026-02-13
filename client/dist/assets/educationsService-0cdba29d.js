@@ -1,0 +1,1 @@
+import{I as a}from"./index-50296341.js";const e="/api/educations",s={async getAll(){return await a.get(`${e}`)},async get(t){return await a.get(`${e}/${t}`)},async update(t,r){return await a.put(`${e}/${t}`,r)},async create(t){return await a.post(`${e}`,t)},async delete(t){return await a.delete(`${e}/${t}`)}};export{s as e};

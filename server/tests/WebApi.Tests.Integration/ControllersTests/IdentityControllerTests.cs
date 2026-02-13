@@ -41,7 +41,7 @@ public class IdentityControllerTests : BaseControllerTest
         var loginResponse = await _httpClient.PostAsJsonAsync("api/identity/login", userLoginDto);
 
         // Assert
-        loginResponse.Should().HaveStatusCode(HttpStatusCode.NoContent);
+        loginResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
 
         string token = await loginResponse.Content.ReadAsStringAsync();
         token.Should().BeEmpty();

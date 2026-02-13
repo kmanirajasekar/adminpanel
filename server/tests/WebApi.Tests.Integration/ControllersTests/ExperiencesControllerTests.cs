@@ -29,7 +29,7 @@ public class ExperiencesControllerTests : BaseControllerTest
 
         // Assert
         response.EnsureSuccessStatusCode();
-        response.Should().HaveStatusCode(HttpStatusCode.NoContent);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -42,7 +42,7 @@ public class ExperiencesControllerTests : BaseControllerTest
         var response = await _httpClient.GetAsync("api/experiences/" + id);
 
         // Assert
-        response.Should().HaveStatusCode(HttpStatusCode.Unauthorized);
+        response.StatusCode.Should().Be(HttpStatusCode.Unauthorized);
     }
 
     [Fact]

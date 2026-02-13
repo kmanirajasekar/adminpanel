@@ -30,7 +30,7 @@ public class EducationsControllerTests : BaseControllerTest
 
         // Assert
         response.EnsureSuccessStatusCode();
-        response.Should().HaveStatusCode(HttpStatusCode.NoContent);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
