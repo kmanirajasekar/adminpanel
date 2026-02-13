@@ -36,7 +36,7 @@
                             <div class="row g-3">
                                 <div class="col-lg-8 col-md-12 col-sm-12">
                                     <div class="view-item-wrapper">
-                                        <span>Email</span>
+                                        <span>Email Address</span>
                                         <p>{{ model.email }}</p>
                                     </div>
                                 </div>
