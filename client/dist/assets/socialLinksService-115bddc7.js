@@ -1,0 +1,1 @@
+import{I as a}from"./index-69f58c4e.js";const e="/api/social-links",n={async getAll(){return await a.get(`${e}`)},async get(t){return await a.get(`${e}/${t}`)},async update(t,r){return await a.put(`${e}/${t}`,r)},async create(t){return await a.post(`${e}`,t)},async delete(t){return await a.delete(`${e}/${t}`)}};export{n as s};
